@@ -1,0 +1,45 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: #BBB;
+}
+
+h2,
+h3 {
+    color: rgb(0, 0, 112);
+}
+
+h2 {
+    margin: 0;
+}
+
+.bloco {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    background: #FFF;
+    width: 200px;
+    height: 200px;
+}
+
+/* o display block é um bloco de texto que ocupa toda a linha */
+
+/* O box-sizing: border-box -> para ocupar a borda o padding do bloco*/
+.bloco:hover {
+    border: 3px solid red;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.bloco p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.container-block {
+    display: flex;
+    flex-flow: row wrap;
+}

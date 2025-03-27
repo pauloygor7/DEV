@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1>Formulário</h1>
+    <!-- action - onde vai as informações salvas / method - qual o método que as informações serão enviadas do formulario -->
+    <form action="arquivo.php" method="post / get">
+
+        <!-- Legenda para nome, tipo texto -->
+        <label for="campo-nome">Nome:</label>
+        <input id="campo-nome" type="text" placeholder="Digite seu nome" required>
+
+        <br><br>
+        <!-- legenda para sobrenome, tipo texto-->
+        <label for="campo-sobrenome">Sobrenome:</label>
+        <input id="campo-sobrenome" type="text" placeholder="Digite seu Sobrenome" required>
+
+        <br><br>
+        <!-- legenda para senha, tipo senha-->
+        <!--required minlength="6" - no mínimo 6 carcteres-->
+        <label for="campo-senha">Senha:</label>
+        <input id="campo-senha" type="password" placeholder="Digite sua senha" required minlength="6">
+
+        <br><br>
+        <!-- legenda para email, tipo email-->
+        <label for="campo-email">Email:</label>
+        <input id="campo-email" type="email" placeholder="Digite seu email" required>
+
+        <br><br>
+
+
+        <!-- required - é pra mostra que o campo tem que ser preenchhido obrigatoriamente-->
+
+        <h2>Animal de estimação</h2>
+
+        <!-- radio é para unica escolha-->
+        <input type="radio" name="animal" value="Cachorro" id="dog">
+        <label for="dog">Cachorro</label>
+
+        <br><br>
+
+        <input type="radio" name="animal" value="Gato" id="cat">
+        <label for="cat">Gato</label>
+
+        <br><br>
+
+        <input type="radio" name="animal" value="Peixe" id="fish">
+        <label for="fish">Peixe</label>
+
+        <br><br>
+
+
+        <input type="radio" name="animal" value="Pássaro" id="bird">
+        <label for="bird">Pássaro</label>
+
+        <br><br> <!-- value - é oq vai ser mandado qnd enviar o formulario -->
+
+
+        <h2>Intens que você possui em sua casa</h2>
+
+        <!-- checkbox é para multiplas escolhas -->
+        <input id="item1" type="checkbox" name="item1" value="TV">
+        <label for="item1">TV</label>
+
+        <br><br>
+
+        <input id="item2" type="checkbox" name="item2" value="Geladeira">
+        <label for="item1">Geladeira</label>
+
+        <br><br>
+
+        <input type="checkbox" name="item3" value="Fogão" id="item3">
+        <label for="item3">Fogão</label>
+
+        <br><br>
+
+        <h2>Escolha uma cor:</h2>
+        <select name="cores" id="cor">
+            <!-- option é para criar as opções -->
+            <option selected disabled value="">Selecione uma cor</option>
+            <!-- selected - é para deixar selecionado, disabled - é para não poder selecionar -->
+            <option value="branco">Branco</option>
+            <option value="vermelho">Vermelho</option>
+            <option value="azul">Azul</option>
+            <option value="verde">Verde</option>
+            <option value="amarelo">Amarelo</option>
+            <option value="preto">Preto</option>
+        </select>
+
+        <br><br>
+
+        <h2>Digite uma mensagem:</h2>
+        <br>
+        <!-- textarea é para criar um campo de texto grande -->
+        <textarea name="mensagem" id="mensagem" cols="45" rows="12" placeholder="Digite uma mensagem"></textarea>
+
+        <br><br>
+
+        <label for="arquivo">Envie um arquivo:</label>
+        <input type="file" name="arquivo" id="arquivo" accept=".pdf, .doc, .docx">
+
+        <br><br>
+
+        <form>
+            <!-- Reset Button -->
+            <input type="reset" value="Limpar o Formulário" id="limpar">
+        </form>
+
+        <br><br>
+
+        <!-- É uma unica ecolhar pois o 'name' é igual, pra virar multlipa escolha só deixar os 'name' diferentes-->
+        <!-- legenda para enviar oq foi preencido, ele é do tipo 'submit' -->
+        <input type="submit" value="Enviar Formulário">
+
+    </form>
+
+
+</body>
+
+</html>
